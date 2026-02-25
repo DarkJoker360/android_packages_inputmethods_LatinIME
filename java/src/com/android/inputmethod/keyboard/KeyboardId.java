@@ -79,7 +79,6 @@ public final class KeyboardId {
     public final EditorInfo mEditorInfo;
     public final boolean mClobberSettingsKey;
     public final boolean mNumberRowEnabled;
-    public final boolean mLanguageSwitchKeyEnabled;
     public final boolean mEmojiKeyEnabled;
     public final String mCustomActionLabel;
     public final boolean mHasShortcutKey;
@@ -96,7 +95,6 @@ public final class KeyboardId {
         mEditorInfo = params.mEditorInfo;
         mClobberSettingsKey = params.mNoSettingsKey;
         mNumberRowEnabled = params.mNumberRowEnabled;
-        mLanguageSwitchKeyEnabled = params.mLanguageSwitchKeyEnabled;
         mEmojiKeyEnabled = params.mEmojiKeyEnabled;
         mCustomActionLabel = (mEditorInfo.actionLabel != null)
                 ? mEditorInfo.actionLabel.toString() : null;
@@ -116,7 +114,6 @@ public final class KeyboardId {
                 id.mClobberSettingsKey,
                 id.mNumberRowEnabled,
                 id.mHasShortcutKey,
-                id.mLanguageSwitchKeyEnabled,
                 id.mEmojiKeyEnabled,
                 id.isMultiLine(),
                 id.imeAction(),
@@ -139,7 +136,6 @@ public final class KeyboardId {
                 && other.mClobberSettingsKey == mClobberSettingsKey
                 && other.mNumberRowEnabled == mNumberRowEnabled
                 && other.mHasShortcutKey == mHasShortcutKey
-                && other.mLanguageSwitchKeyEnabled == mLanguageSwitchKeyEnabled
                 && other.mEmojiKeyEnabled == mEmojiKeyEnabled
                 && other.isMultiLine() == isMultiLine()
                 && other.imeAction() == imeAction()
@@ -211,7 +207,6 @@ public final class KeyboardId {
                 (mNumberRowEnabled ? " numberRowEnabled" : ""),
                 (passwordInput() ? " passwordInput" : ""),
                 (mHasShortcutKey ? " hasShortcutKey" : ""),
-                (mLanguageSwitchKeyEnabled ? " languageSwitchKeyEnabled" : ""),
                 (mEmojiKeyEnabled ? " emojiKeyEnabled" : ""),
                 (isMultiLine() ? " isMultiLine" : ""),
                 (mIsSplitLayout ? " isSplitLayout" : "")
